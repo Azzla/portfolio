@@ -1,0 +1,30 @@
+/*General Layout Styles*/
+* {
+	font-family: sans-serif, Helvetica;
+	text-align:center;
+	overflow-x:hidden;
+	background-color: #222831;
+	color:#eee;
+}
+
+h1 {
+	font-size:100px;
+	margin:auto;
+	padding: 50px;
+	border-bottom: #fff 2px solid;
+}
+
+ul {
+	overflow:hidden;
+	margin-top:40px;
+}
+
+li {
+	font-size: 40px;
+	display:inline;
+	padding: 40px;
+}
+
+img {
+	display:none;
+}
