@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Josefin+Sans:300');
+
 /* --------------------------------------------------------- */
 /* -------------------- GLOBAL SETTINGS // STYLES ---------- */
 /* --------------------------------------------------------- */
@@ -28,12 +30,15 @@ ul {
 }
 
 a {
-	display: inline-block;
-	color: $color-dg;
 	text-decoration: none;
-	transition: all .5s;
-	&:hover { transform: rotate(-4deg) scale(1.1); }
-	&:active { color:$color-p; }
+	color: inherit;
+}
+
+/* ---- Clearfix ---- */
+.clearfix::after {
+		content: "";
+		display: table;
+		clear: both;
 }
 
 /* --------------------------------------------------------- */
@@ -43,6 +48,7 @@ a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
 }
 
 %borders {
@@ -54,11 +60,16 @@ a {
 .triangle {
 	color: $color-dg;
 	transform: scale(4);
-	margin-top: 6em;
-	transition: all .5s;
+	margin-top: 8em;
+	transition: all .3s;
 	
 	&:hover { cursor: pointer; color: white; transform: scale(6);}
 	&:active { transform: scale(4); }
+}
+
+.up {
+	margin-bottom: 8em;
+	margin-top:0;
 }
 
 /* --------------------------------------------------------- */
@@ -67,46 +78,85 @@ a {
 header {
 	@extend %center;
 	height: 7em;
+	font-weight: 300;
 	
 	.main_nav {
-		 li { display: inline; font-size: 1.5em; padding: 0 .7em;}
+		color: $color-dg;
+		li { display: inline; font-size: 1.8em; padding: 0 .7em;}
+		 
+		a {
+			display: inline-block;
+			transition: all .3s;
+		 	&:hover { transform: rotate(-3deg) scale(1.1); }
+		  &:active { color:$color-p; }
+		}
 	}
 }
 
 section {
 	@extend %center;
-	flex-direction: column;
-	
 	height: 100vh;
-	width: 99vw;
-	background: linear-gradient(to top, $color-lg, $color-p 30%);
+	width: 100vw;
+	max-width: 100%;
 }
 
-
+footer {
+	@extend %center;
+	height: 8em;
+	color: $color-dg;
+	font-size: 1.3em;
+	border-top: 2px solid $color-lg;
+	
+	span {
+		padding-top: 1em;
+	}
+}
 
 /* --------------------------------------------------------- */
-/* -------------------- BLOCK-ELEMENT SELECTORS ------------ */
+/* ----------------- BLOCK-ELEMENT SELECTORS --------------- */
 /* --------------------------------------------------------- */
 #slide_1 {
-	#up {
-		margin-bottom: 6em;
-	}
+	background: linear-gradient(to top, white, $color-p 30%);
 	
-	.name {
+	h1 {
 		@extend %borders;
 		
-		padding: .3em 0;
+		padding: .5em 0;
 		font-size: 4em;
 		color: $color-dg;
 	}
 	
-	.skills {
+	.attributes {
 		color: $color-dg;
 		font-family: Amatic SC;
 		font-size: 2em;
-		margin-top: 1em;
+		margin-top: 1.2em;
 		
-		li { display: inline; font-size: 1.5em; padding: 0 .8em;}
+		li { display: inline; font-size: 1.5em; padding: 0 .8em; }
+	}
+}
+
+#slide_2 {
+	background: linear-gradient(to bottom, white 70%, $color-p);
+	
+	h1 {
+		@extend %borders;
+		
+		padding: .5em 0;
+		font-size: 3em;
+		color: $color-dg;
+	}
+}
+
+#slide_3 {
+	background: linear-gradient(to top, white, $color-p 30%);
+	
+	h1 {
+		@extend %borders;
+		
+		padding: .5em 0;
+		font-size: 3em;
+		color: $color-dg;
 	}
 }
 
@@ -121,15 +171,4 @@ section {
 
 
 
-
-
-
-
-
-
-/* ---- Clearfix ---- */
-.clearfix::after {
-		content: "";
-		display: table;
-		clear: both;
-}
+//

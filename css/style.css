@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC|Josefin+Sans:300");
 /* --------------------------------------------------------- */
 /* -------------------- GLOBAL SETTINGS // STYLES ---------- */
 /* --------------------------------------------------------- */
@@ -23,28 +24,28 @@ ul {
 }
 
 a {
-  display: inline-block;
-  color: #888888;
   text-decoration: none;
-  transition: all 0.5s;
+  color: inherit;
 }
-a:hover {
-  transform: rotate(-4deg) scale(1.1);
-}
-a:active {
-  color: #ffe8df;
+
+/* ---- Clearfix ---- */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /* --------------------------------------------------------- */
 /* ------------------------ CLASSES ------------------------ */
 /* --------------------------------------------------------- */
-section, header {
+footer, section, header {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
-#slide_1 .name {
+#slide_3 h1, #slide_2 h1, #slide_1 h1 {
   border-top: 2px solid #888888;
   border-bottom: 2px solid #888888;
 }
@@ -52,8 +53,8 @@ section, header {
 .triangle {
   color: #888888;
   transform: scale(4);
-  margin-top: 6em;
-  transition: all 0.5s;
+  margin-top: 8em;
+  transition: all 0.3s;
 }
 .triangle:hover {
   cursor: pointer;
@@ -64,53 +65,92 @@ section, header {
   transform: scale(4);
 }
 
+.up {
+  margin-bottom: 8em;
+  margin-top: 0;
+}
+
 /* --------------------------------------------------------- */
 /* -------------------- BLOCK SELECTORS -------------------- */
 /* --------------------------------------------------------- */
 header {
   height: 7em;
+  font-weight: 300;
+}
+header .main_nav {
+  color: #888888;
 }
 header .main_nav li {
   display: inline;
-  font-size: 1.5em;
+  font-size: 1.8em;
   padding: 0 0.7em;
+}
+header .main_nav a {
+  display: inline-block;
+  transition: all 0.3s;
+}
+header .main_nav a:hover {
+  transform: rotate(-3deg) scale(1.1);
+}
+header .main_nav a:active {
+  color: #ffe8df;
 }
 
 section {
-  flex-direction: column;
   height: 100vh;
-  width: 99vw;
-  background: linear-gradient(to top, #f0f0f0, #ffe8df 30%);
+  width: 100vw;
+  max-width: 100%;
+}
+
+footer {
+  height: 8em;
+  color: #888888;
+  font-size: 1.3em;
+  border-top: 2px solid #f0f0f0;
+}
+footer span {
+  padding-top: 1em;
 }
 
 /* --------------------------------------------------------- */
-/* -------------------- BLOCK-ELEMENT SELECTORS ------------ */
+/* ----------------- BLOCK-ELEMENT SELECTORS --------------- */
 /* --------------------------------------------------------- */
-#slide_1 #up {
-  margin-bottom: 6em;
+#slide_1 {
+  background: linear-gradient(to top, white, #ffe8df 30%);
 }
-#slide_1 .name {
-  padding: 0.3em 0;
+#slide_1 h1 {
+  padding: 0.5em 0;
   font-size: 4em;
   color: #888888;
 }
-#slide_1 .skills {
+#slide_1 .attributes {
   color: #888888;
   font-family: Amatic SC;
   font-size: 2em;
-  margin-top: 1em;
+  margin-top: 1.2em;
 }
-#slide_1 .skills li {
+#slide_1 .attributes li {
   display: inline;
   font-size: 1.5em;
   padding: 0 0.8em;
 }
 
-/* ---- Clearfix ---- */
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
+#slide_2 {
+  background: linear-gradient(to bottom, white 70%, #ffe8df);
+}
+#slide_2 h1 {
+  padding: 0.5em 0;
+  font-size: 3em;
+  color: #888888;
+}
+
+#slide_3 {
+  background: linear-gradient(to top, white, #ffe8df 30%);
+}
+#slide_3 h1 {
+  padding: 0.5em 0;
+  font-size: 3em;
+  color: #888888;
 }
 
 /*# sourceMappingURL=style.css.map */
