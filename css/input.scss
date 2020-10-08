@@ -1,0 +1,135 @@
+/* --------------------------------------------------------- */
+/* -------------------- GLOBAL SETTINGS // STYLES ---------- */
+/* --------------------------------------------------------- */
+$font-stack: Josefin Sans, Helvetica, sans-serif;
+$color-p: #ffe8df;
+$color-lg: #f0f0f0;
+$color-dg: #888888;
+
+* {
+	box-sizing:border-box;
+	margin:0;
+	padding:0;
+}
+
+body{
+	font-family: $font-stack;
+	line-height: normal;
+	background-color: white;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: Amatic SC;
+	letter-spacing: .2em;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	display: inline-block;
+	color: $color-dg;
+	text-decoration: none;
+	transition: all .5s;
+	&:hover { transform: rotate(-4deg) scale(1.1); }
+	&:active { color:$color-p; }
+}
+
+/* --------------------------------------------------------- */
+/* ------------------------ CLASSES ------------------------ */
+/* --------------------------------------------------------- */
+%center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+%borders {
+	border-top: 2px solid $color-dg;
+	border-bottom: 2px solid $color-dg;
+}
+
+///////////////// GLOBAL ////////////////////
+.triangle {
+	color: $color-dg;
+	transform: scale(4);
+	margin-top: 6em;
+	transition: all .5s;
+	
+	&:hover { cursor: pointer; color: white; transform: scale(6);}
+	&:active { transform: scale(4); }
+}
+
+/* --------------------------------------------------------- */
+/* -------------------- BLOCK SELECTORS -------------------- */
+/* --------------------------------------------------------- */
+header {
+	@extend %center;
+	height: 7em;
+	
+	.main_nav {
+		 li { display: inline; font-size: 1.5em; padding: 0 .7em;}
+	}
+}
+
+section {
+	@extend %center;
+	flex-direction: column;
+	
+	height: 100vh;
+	width: 99vw;
+	background: linear-gradient(to top, $color-lg, $color-p 30%);
+}
+
+
+
+/* --------------------------------------------------------- */
+/* -------------------- BLOCK-ELEMENT SELECTORS ------------ */
+/* --------------------------------------------------------- */
+#slide_1 {
+	#up {
+		margin-bottom: 6em;
+	}
+	
+	.name {
+		@extend %borders;
+		
+		padding: .3em 0;
+		font-size: 4em;
+		color: $color-dg;
+	}
+	
+	.skills {
+		color: $color-dg;
+		font-family: Amatic SC;
+		font-size: 2em;
+		margin-top: 1em;
+		
+		li { display: inline; font-size: 1.5em; padding: 0 .8em;}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---- Clearfix ---- */
+.clearfix::after {
+		content: "";
+		display: table;
+		clear: both;
+}
