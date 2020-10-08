@@ -1,111 +1,116 @@
-/* ---- General Settings ---- */
-
+/* --------------------------------------------------------- */
+/* -------------------- GLOBAL SETTINGS // STYLES ---------- */
+/* --------------------------------------------------------- */
 * {
-	box-sizing:border-box;
-	margin:0;
-	padding:0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-	font-family: Quicksand, Roboto, sans-serif;
-	line-height: normal;
-	background-color: #eee;
+body {
+  font-family: Josefin Sans, Helvetica, sans-serif;
+  line-height: normal;
+  background-color: white;
 }
 
-/* ---- Element Selectors ---- */
-header {
-	background: linear-gradient(to right, #222831 50%, #32e0c4);
-	color:#222831;
+h1, h2, h3, h4, h5, h6 {
+  font-family: Amatic SC;
+  letter-spacing: 0.2em;
 }
 
-footer {
-	text-align:center;
-	background-color: #32e0c4;
-}
-
-h1 {
-	font-size:3em;
-}
-
-h1,h2,h3 {
-	color:#eee;
-}
-
-p {
-	font-family: Roboto;
-	font-weight: 200;
+ul {
+  list-style: none;
 }
 
 a {
-	text-decoration: none;
-	color:#32e0c4;
+  display: inline-block;
+  color: #888888;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+a:hover {
+  transform: rotate(-4deg) scale(1.1);
+}
+a:active {
+  color: #ffe8df;
 }
 
-/* ==== General Layout Styles ==== */
-
-.main_header {
-	padding: 3em 0;
+/* --------------------------------------------------------- */
+/* ------------------------ CLASSES ------------------------ */
+/* --------------------------------------------------------- */
+section, header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.main_footer {
-	padding: 2em 0;
+#slide_1 .name {
+  border-top: 2px solid #888888;
+  border-bottom: 2px solid #888888;
 }
 
-.main_footer span {
-	display:block;
-	font-size: 1.5em;
+.triangle {
+  color: #888888;
+  transform: scale(4);
+  margin-top: 6em;
+  transition: all 0.5s;
+}
+.triangle:hover {
+  cursor: pointer;
+  color: white;
+  transform: scale(6);
+}
+.triangle:active {
+  transform: scale(4);
 }
 
-/* -- header navigation -- */
-.container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+/* --------------------------------------------------------- */
+/* -------------------- BLOCK SELECTORS -------------------- */
+/* --------------------------------------------------------- */
+header {
+  height: 7em;
+}
+header .main_nav li {
+  display: inline;
+  font-size: 1.5em;
+  padding: 0 0.7em;
 }
 
-.name {
-	margin-bottom: 1em;
-	color:
+section {
+  flex-direction: column;
+  height: 100vh;
+  width: 99vw;
+  background: linear-gradient(to top, #f0f0f0, #ffe8df 30%);
 }
 
-.main_nav {
-	font-size: 2em;
+/* --------------------------------------------------------- */
+/* -------------------- BLOCK-ELEMENT SELECTORS ------------ */
+/* --------------------------------------------------------- */
+#slide_1 #up {
+  margin-bottom: 6em;
 }
-
-.main_nav li {
-	display: inline;
-	margin: 0 .25em;
+#slide_1 .name {
+  padding: 0.3em 0;
+  font-size: 4em;
+  color: #888888;
 }
-
-/* -- banner -- */
-.banner {
-	font-family: 'Roboto';
-	font-weight:200;
-	display:flex;
-	flex-direction: column;
-	justify-content: center;
-	
-	width: 100vw;
-	max-width: 100%;
-	height: 700px;
-	overflow: hidden;
-	background-image: url('../img/abs1_edit.jpg');
-	background-position: top;
+#slide_1 .skills {
+  color: #888888;
+  font-family: Amatic SC;
+  font-size: 2em;
+  margin-top: 1em;
 }
-
-.banner h2 {
-	padding: 2em 0;
-	font-size: 3em;
-	text-align: center;
-	text-transform: uppercase;
-	letter-spacing: 1em;
-	color: #222831;
+#slide_1 .skills li {
+  display: inline;
+  font-size: 1.5em;
+  padding: 0 0.8em;
 }
 
 /* ---- Clearfix ---- */
 .clearfix::after {
-		content: "";
-		display: table;
-		clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
+
+/*# sourceMappingURL=style.css.map */
