@@ -70,6 +70,12 @@ footer, section, header {
   margin-top: 0;
 }
 
+.square {
+  position: fixed;
+  top: 7em;
+  transform: scale(6);
+}
+
 /* --------------------------------------------------------- */
 /* -------------------- BLOCK SELECTORS -------------------- */
 /* --------------------------------------------------------- */
@@ -101,6 +107,10 @@ section {
   width: 100vw;
   max-width: 100%;
 }
+section h1 {
+  font-size: 4em;
+  padding: 0.5em 0;
+}
 
 footer {
   height: 8em;
@@ -117,14 +127,9 @@ footer span {
 /* --------------------------------------------------------- */
 #slide_1 {
   background: linear-gradient(to top, white, #ffe8df 30%);
-}
-#slide_1 h1 {
-  padding: 0.5em 0;
-  font-size: 4em;
   color: #888888;
 }
 #slide_1 .attributes {
-  color: #888888;
   font-family: Amatic SC;
   font-size: 2em;
   margin-top: 1.2em;
@@ -137,19 +142,30 @@ footer span {
 
 #slide_2 {
   background: linear-gradient(to bottom, white 70%, #ffe8df);
-}
-#slide_2 h1 {
-  padding: 0.5em 0;
-  font-size: 3em;
   color: #888888;
+}
+#slide_2 .container {
+  display: table;
+  table-layout: fixed;
+  width: 40%;
+  margin-top: 50px;
+}
+#slide_2 .container div {
+  display: table-cell;
+  font-size: 1.5em;
+  text-align: center;
+}
+#slide_2 .container div li {
+  padding: 5px;
+}
+#slide_2 .container h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.75em;
 }
 
 #slide_3 {
   background: linear-gradient(to top, white, #ffe8df 30%);
-}
-#slide_3 h1 {
-  padding: 0.5em 0;
-  font-size: 3em;
   color: #888888;
 }
 
