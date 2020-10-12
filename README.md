@@ -1,7 +1,13 @@
 # portfolio
 Personal portfolio project - Built from the ground up with HTML5, CSS3, and JavaScript.
+[Link](http://carsonbartholomew.me/)
 
-Developer tools and libraries utilized:
+## Developer Tools:
 - SASS (scss)
+- React
+- Redux
 
-View the currently-live deployment [here](http://carsonbartholomew.me/).
+## Libraries:
+- NPM
+
+View the current version deployment [here](http://carsonbartholomew.me/).
