@@ -1,11 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Amatic+SC|Josefin+Sans:300");
 /* --------------------------------------------------------- */
-/* -------------------- GLOBAL SETTINGS // STYLES ---------- */
+/* --------------- GLOBAL SETTINGS // STYLES --------------- */
 /* --------------------------------------------------------- */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -38,7 +42,7 @@ a {
 /* --------------------------------------------------------- */
 /* ------------------------ CLASSES ------------------------ */
 /* --------------------------------------------------------- */
-footer, section, header {
+#slide_3, #slide_2, #slide_1 .summary, #slide_1, footer, header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,38 +54,39 @@ footer, section, header {
   border-bottom: 2px solid #888888;
 }
 
-.triangle {
+.triangle-button {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.triangle-button {
   color: #888888;
-  transform: scale(4);
+  transform: scale(3.5);
   margin-top: 8em;
   transition: all 0.3s;
 }
-.triangle:hover {
+.triangle-button:hover {
   cursor: pointer;
   color: white;
-  transform: scale(6);
+  transform: scale(5);
 }
-.triangle:active {
-  transform: scale(4);
-}
-
-.up {
-  margin-bottom: 8em;
-  margin-top: 0;
-}
-
-.square {
-  position: fixed;
-  top: 7em;
-  transform: scale(6);
+.triangle-button:active {
+  transform: scale(3);
 }
 
 /* --------------------------------------------------------- */
 /* -------------------- BLOCK SELECTORS -------------------- */
 /* --------------------------------------------------------- */
 header {
-  height: 7em;
+  height: 5em;
+  width: 100%;
   font-weight: 300;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 header .main_nav {
   color: #888888;
@@ -94,12 +99,16 @@ header .main_nav li {
 header .main_nav a {
   display: inline-block;
   transition: all 0.3s;
+  padding: 5px;
 }
 header .main_nav a:hover {
-  transform: rotate(-3deg) scale(1.1);
+  transform: scale(1.1);
+  color: white;
+  background-color: #888888;
 }
 header .main_nav a:active {
   color: #ffe8df;
+  transform: rotate(-3deg) scale(1);
 }
 
 section {
@@ -129,15 +138,31 @@ footer span {
   background: linear-gradient(to top, white, #ffe8df 30%);
   color: #888888;
 }
+#slide_1 h1 {
+  margin-top: 1em;
+}
 #slide_1 .attributes {
   font-family: Amatic SC;
   font-size: 2em;
-  margin-top: 1.2em;
+  margin-top: 1.5em;
 }
 #slide_1 .attributes li {
   display: inline;
   font-size: 1.5em;
   padding: 0 0.8em;
+}
+#slide_1 .summary {
+  padding: 20px;
+  margin-top: 3em;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+}
+#slide_1 .summary p {
+  font-size: 1.2em;
+  text-align: center;
+  font-style: italic;
+  line-height: 1.25em;
+  width: 900px;
 }
 
 #slide_2 {
@@ -147,7 +172,7 @@ footer span {
 #slide_2 .container {
   display: table;
   table-layout: fixed;
-  width: 40%;
+  width: 800px;
   margin-top: 50px;
 }
 #slide_2 .container div {

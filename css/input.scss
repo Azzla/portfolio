@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Josefin+Sans:300');
 
 /* --------------------------------------------------------- */
-/* -------------------- GLOBAL SETTINGS // STYLES ---------- */
+/* --------------- GLOBAL SETTINGS // STYLES --------------- */
 /* --------------------------------------------------------- */
 $font-stack: Josefin Sans, Helvetica, sans-serif;
 $color-p: #ffe8df;
@@ -14,6 +14,8 @@ $color-dg: #888888;
 	padding:0;
 }
 
+html { scroll-behavior: smooth; }
+
 body{
 	font-family: $font-stack;
 	line-height: normal;
@@ -25,14 +27,8 @@ h1,h2,h3,h4,h5,h6 {
 	letter-spacing: .2em;
 }
 
-ul {
-	list-style: none;
-}
-
-a {
-	text-decoration: none;
-	color: inherit;
-}
+ul { list-style: none; }
+a { text-decoration: none; color: inherit; }
 
 /* ---- Clearfix ---- */
 .clearfix::after {
@@ -56,26 +52,26 @@ a {
 	border-bottom: 2px solid $color-dg;
 }
 
-///////////////// GLOBAL ////////////////////
-.triangle {
+// -- Can't highlight via selection
+%unselectable {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.triangle-button {
+	@extend %unselectable;
 	color: $color-dg;
-	transform: scale(4);
+	transform: scale(3.5);
 	margin-top: 8em;
 	transition: all .3s;
 	
-	&:hover { cursor: pointer; color: white; transform: scale(6);}
-	&:active { transform: scale(4); }
-}
-
-.up {
-	margin-bottom: 8em;
-	margin-top:0;
-}
-
-.square {
-	position: fixed;
-	top: 7em;
-	transform: scale(6);
+	&:hover { cursor: pointer; color: white; transform: scale(5);}
+	&:active { transform: scale(3); }
+	
 }
 
 /* --------------------------------------------------------- */
@@ -83,8 +79,12 @@ a {
 /* --------------------------------------------------------- */
 header {
 	@extend %center;
-	height: 7em;
+	height: 5em;
+	width:100%;
 	font-weight: 300;
+	position: fixed;
+	background-color: rgba(255, 255, 255, .7);
+	//border-bottom: solid $color-dg 2px;
 	
 	.main_nav {
 		color: $color-dg;
@@ -93,14 +93,15 @@ header {
 		a {
 			display: inline-block;
 			transition: all .3s;
-		 	&:hover { transform: rotate(-3deg) scale(1.1); }
-		  &:active { color:$color-p; }
+			padding: 5px;
+		 	&:hover { transform: scale(1.1); color: white; background-color: $color-dg;}
+		  &:active { color:$color-p; transform: rotate(-3deg) scale(1);}
 		}
 	}
 }
 
+// -- page division sizing and settings
 section {
-	@extend %center;
 	height: 100vh;
 	width: 100vw;
 	max-width: 100%;
@@ -115,32 +116,51 @@ footer {
 	font-size: 1.3em;
 	border-top: 2px solid $color-lg;
 	
-	span {
-		padding-top: 1em;
-	}
+	span { padding-top: 1em; }
 }
 
 /* --------------------------------------------------------- */
 /* ----------------- BLOCK-ELEMENT SELECTORS --------------- */
 /* --------------------------------------------------------- */
+///////////////// SLIDE 1 ////////////////////
 #slide_1 {
+	@extend %center;
 	background: linear-gradient(to top, white, $color-p 30%);
 	color: $color-dg;
 	
 	h1 {
 		@extend %borders;
+		margin-top: 1em;
 	}
 	
 	.attributes {
 		font-family: Amatic SC;
 		font-size: 2em;
-		margin-top: 1.2em;
+		margin-top: 1.5em;
 		
 		li { display: inline; font-size: 1.5em; padding: 0 .8em; }
 	}
+	
+	.summary {
+		@extend %center;
+		padding: 20px;
+		margin-top: 3em;
+		width: 100%;
+		background: rgba(255,255,255, .5);
+		
+		p {
+			font-size: 1.2em;
+			text-align: center;
+			font-style: italic;
+			line-height: 1.25em;
+			width: 900px;
+		}
+	}
 }
 
+///////////////// SLIDE 2 ////////////////////
 #slide_2 {
+	@extend %center;
 	background: linear-gradient(to bottom, white 70%, $color-p);
 	color: $color-dg;
 	
@@ -151,7 +171,7 @@ footer {
 	.container {
 		display: table;
 		table-layout: fixed;
-		width: 40%;
+		width: 800px;
 		margin-top: 50px;
 		
 		div {
@@ -170,13 +190,20 @@ footer {
 	}
 }
 
+///////////////// SLIDE 3 ////////////////////
 #slide_3 {
+	@extend %center;
 	background: linear-gradient(to top, white, $color-p 30%);
 	color: $color-dg;
 	
 	h1 {
 		@extend %borders;
 	}
+}
+
+///////////////// SLIDE 4 ////////////////////
+#slide_4 {
+	
 }
 
 
@@ -188,6 +215,15 @@ footer {
 
 
 
-
-
 //
+// address {
+// 	display:table;
+// 	table-layout: auto;
+// 	width: 600px;
+// 	font-size: 1.3em;
+// 	margin-bottom: 5px;
+//
+// 	span {display: table-cell; }
+// 	.email {text-align: left; }
+// 	.phone {text-align: right; }
+// }
