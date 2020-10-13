@@ -42,7 +42,7 @@ a {
 /* --------------------------------------------------------- */
 /* ------------------------ CLASSES ------------------------ */
 /* --------------------------------------------------------- */
-#slide_3, #slide_2, #slide_1 .summary, #slide_1, footer, header {
+#slide_4, #slide_3, #slide_2, #slide_1 .summary, #slide_1, footer, header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -113,6 +113,7 @@ header .main_nav a:active {
 
 section {
   height: 100vh;
+  min-height: 850px;
   width: 100vw;
   max-width: 100%;
 }
@@ -192,6 +193,12 @@ footer span {
 #slide_3 {
   background: linear-gradient(to top, white, #ffe8df 30%);
   color: #888888;
+}
+#slide_4 .project-showcase {
+  width: 80%;
+  height: 70%;
+  background-color: #888888;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /*# sourceMappingURL=style.css.map */

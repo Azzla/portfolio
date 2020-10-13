@@ -103,11 +103,14 @@ header {
 // -- page division sizing and settings
 section {
 	height: 100vh;
+	min-height: 850px;
 	width: 100vw;
 	max-width: 100%;
 	
 	h1 {font-size: 4em; padding: .5em 0;}
 }
+
+//.separator {background-color: $color-p; padding-top: 150px;}
 
 footer {
 	@extend %center;
@@ -203,7 +206,14 @@ footer {
 
 ///////////////// SLIDE 4 ////////////////////
 #slide_4 {
+	@extend %center;
 	
+	.project-showcase {
+		width: 80%;
+		height: 70%;
+		background-color: $color-dg;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
 }
 
 
