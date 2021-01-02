@@ -1,12 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Josefin+Sans:300');
+@import url('https://fonts.googleapis.com/css?family=Gaegu:700|Josefin+Sans:300');
 
 /* --------------------------------------------------------- */
 /* --------------- GLOBAL SETTINGS // STYLES --------------- */
 /* --------------------------------------------------------- */
 $font-stack: Josefin Sans, Helvetica, sans-serif;
-$color-p: #ffe8df;
-$color-lg: #f0f0f0;
-$color-dg: #888888;
+$color-p: #f1f6f9;
+$color-light: #9ba4b4;
+$color-mid: #394867;
+$color-dark: #14274e;
 
 * {
 	box-sizing:border-box;
@@ -23,8 +24,8 @@ body{
 }
 
 h1,h2,h3,h4,h5,h6 {
-	font-family: Amatic SC;
-	letter-spacing: .2em;
+	font-family: $font-stack;
+	letter-spacing: .1em;
 }
 
 ul { list-style: none; }
@@ -48,8 +49,8 @@ a { text-decoration: none; color: inherit; }
 }
 
 %borders {
-	border-top: 2px solid $color-dg;
-	border-bottom: 2px solid $color-dg;
+	border-top: 2px solid $color-dark;
+	border-bottom: 2px solid $color-dark;
 }
 
 // -- Can't highlight via selection
@@ -64,10 +65,10 @@ a { text-decoration: none; color: inherit; }
 
 .triangle-button {
 	@extend %unselectable;
-	color: $color-dg;
+	color: $color-dark;
 	transform: scale(3.5);
 	margin-top: 8em;
-	transition: all .3s;
+	transition: all .2s;
 	
 	&:hover { cursor: pointer; color: white; transform: scale(5);}
 	&:active { transform: scale(3); }
@@ -83,18 +84,22 @@ header {
 	width:100%;
 	font-weight: 300;
 	position: fixed;
-	background-color: rgba(255, 255, 255, .7);
-	//border-bottom: solid $color-dg 2px;
+	background-color: #f1f6f9d9;
 	
 	.main_nav {
-		color: $color-dg;
+		color: $color-dark;
+		
 		li { display: inline; font-size: 1.8em; padding: 0 .7em;}
-		 
 		a {
 			display: inline-block;
-			transition: all .3s;
+			transition: all .2s;
 			padding: 5px;
-		 	&:hover { transform: scale(1.1); color: white; background-color: $color-dg;}
+		 	&:hover {
+				filter: blur(0);
+				transform: scale(1.1);
+				color: white;
+				background-color: $color-dark;
+			}
 		  &:active { color:$color-p; transform: rotate(-3deg) scale(1);}
 		}
 	}
@@ -115,9 +120,9 @@ section {
 footer {
 	@extend %center;
 	height: 8em;
-	color: $color-dg;
+	color: $color-dark;
 	font-size: 1.3em;
-	border-top: 2px solid $color-lg;
+	border-top: 2px solid $color-light;
 	
 	span { padding-top: 1em; }
 }
@@ -128,16 +133,15 @@ footer {
 ///////////////// SLIDE 1 ////////////////////
 #slide_1 {
 	@extend %center;
-	background: linear-gradient(to top, white, $color-p 30%);
-	color: $color-dg;
+	background: $color-p;
+	color: $color-dark;
 	
 	h1 {
 		@extend %borders;
-		margin-top: 1em;
 	}
 	
 	.attributes {
-		font-family: Amatic SC;
+		font-family: Gaegu;
 		font-size: 2em;
 		margin-top: 1.5em;
 		
@@ -164,13 +168,14 @@ footer {
 ///////////////// SLIDE 2 ////////////////////
 #slide_2 {
 	@extend %center;
-	background: linear-gradient(to bottom, white 70%, $color-p);
-	color: $color-dg;
+	background: $color-dark;
+	color: $color-light;
 	
 	h1 {
 		@extend %borders;
 	}
 	
+	span {color: $color-p;} span:hover {color: $color-dark;}
 	.container {
 		display: table;
 		table-layout: fixed;
@@ -196,44 +201,20 @@ footer {
 ///////////////// SLIDE 3 ////////////////////
 #slide_3 {
 	@extend %center;
-	background: linear-gradient(to top, white, $color-p 30%);
-	color: $color-dg;
+	background: $color-p;
+	color: $color-dark;
 	
 	h1 {
 		@extend %borders;
 	}
 }
 
-///////////////// SLIDE 4 ////////////////////
-#slide_4 {
-	@extend %center;
-	
-	.project-showcase {
-		width: 80%;
-		height: 70%;
-		background-color: $color-dg;
-		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+// Media Queries
+@media (max-width: 1400px)
+{
+	#slide_1 {
+		.attributes {
+			li {display: block;}
+		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-//
-// address {
-// 	display:table;
-// 	table-layout: auto;
-// 	width: 600px;
-// 	font-size: 1.3em;
-// 	margin-bottom: 5px;
-//
-// 	span {display: table-cell; }
-// 	.email {text-align: left; }
-// 	.phone {text-align: right; }
-// }

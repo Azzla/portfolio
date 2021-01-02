@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Amatic+SC|Josefin+Sans:300");
+@import url("https://fonts.googleapis.com/css?family=Gaegu:700|Josefin+Sans:300");
 /* --------------------------------------------------------- */
 /* --------------- GLOBAL SETTINGS // STYLES --------------- */
 /* --------------------------------------------------------- */
@@ -19,8 +19,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Amatic SC;
-  letter-spacing: 0.2em;
+  font-family: Josefin Sans, Helvetica, sans-serif;
+  letter-spacing: 0.1em;
 }
 
 ul {
@@ -50,8 +50,8 @@ a {
 }
 
 #slide_3 h1, #slide_2 h1, #slide_1 h1 {
-  border-top: 2px solid #888888;
-  border-bottom: 2px solid #888888;
+  border-top: 2px solid #14274e;
+  border-bottom: 2px solid #14274e;
 }
 
 .triangle-button {
@@ -64,10 +64,10 @@ a {
 }
 
 .triangle-button {
-  color: #888888;
+  color: #14274e;
   transform: scale(3.5);
   margin-top: 8em;
-  transition: all 0.3s;
+  transition: all 0.2s;
 }
 .triangle-button:hover {
   cursor: pointer;
@@ -86,10 +86,10 @@ header {
   width: 100%;
   font-weight: 300;
   position: fixed;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: #f1f6f9d9;
 }
 header .main_nav {
-  color: #888888;
+  color: #14274e;
 }
 header .main_nav li {
   display: inline;
@@ -98,16 +98,17 @@ header .main_nav li {
 }
 header .main_nav a {
   display: inline-block;
-  transition: all 0.3s;
+  transition: all 0.2s;
   padding: 5px;
 }
 header .main_nav a:hover {
+  filter: blur(0);
   transform: scale(1.1);
   color: white;
-  background-color: #888888;
+  background-color: #14274e;
 }
 header .main_nav a:active {
-  color: #ffe8df;
+  color: #f1f6f9;
   transform: rotate(-3deg) scale(1);
 }
 
@@ -124,9 +125,9 @@ section h1 {
 
 footer {
   height: 8em;
-  color: #888888;
+  color: #14274e;
   font-size: 1.3em;
-  border-top: 2px solid #f0f0f0;
+  border-top: 2px solid #9ba4b4;
 }
 footer span {
   padding-top: 1em;
@@ -136,14 +137,11 @@ footer span {
 /* ----------------- BLOCK-ELEMENT SELECTORS --------------- */
 /* --------------------------------------------------------- */
 #slide_1 {
-  background: linear-gradient(to top, white, #ffe8df 30%);
-  color: #888888;
-}
-#slide_1 h1 {
-  margin-top: 1em;
+  background: #f1f6f9;
+  color: #14274e;
 }
 #slide_1 .attributes {
-  font-family: Amatic SC;
+  font-family: Gaegu;
   font-size: 2em;
   margin-top: 1.5em;
 }
@@ -167,8 +165,14 @@ footer span {
 }
 
 #slide_2 {
-  background: linear-gradient(to bottom, white 70%, #ffe8df);
-  color: #888888;
+  background: #14274e;
+  color: #9ba4b4;
+}
+#slide_2 span {
+  color: #f1f6f9;
+}
+#slide_2 span:hover {
+  color: #14274e;
 }
 #slide_2 .container {
   display: table;
@@ -191,14 +195,18 @@ footer span {
 }
 
 #slide_3 {
-  background: linear-gradient(to top, white, #ffe8df 30%);
-  color: #888888;
+  background: #f1f6f9;
+  color: #14274e;
 }
-#slide_4 .project-showcase {
-  width: 80%;
-  height: 70%;
-  background-color: #888888;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+#slide_4 {
+  background: #14274e;
+  color: #f1f6f9;
+}
+
+@media (max-width: 1400px) {
+  #slide_1 .attributes li {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
