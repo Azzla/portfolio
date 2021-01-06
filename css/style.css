@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ul {
-  list-style: none;
+  list-style: circle;
 }
 
 a {
@@ -42,7 +42,7 @@ a {
 /* --------------------------------------------------------- */
 /* ------------------------ CLASSES ------------------------ */
 /* --------------------------------------------------------- */
-#slide_4, #slide_3, #slide_2, #slide_1 .summary, #slide_1, footer, header {
+#slide_3, #slide_2, #slide_1 .summary, #slide_1, footer, header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -168,6 +168,9 @@ footer span {
   background: #14274e;
   color: #9ba4b4;
 }
+#slide_2 ul {
+  list-style: none;
+}
 #slide_2 span {
   color: #f1f6f9;
 }
@@ -195,15 +198,51 @@ footer span {
 }
 
 #slide_3 {
+  height: 1000px;
   background: #f1f6f9;
   color: #14274e;
 }
-#slide_4 {
-  background: #14274e;
-  color: #f1f6f9;
+#slide_3 h1 {
+  margin-bottom: 100px;
+}
+#slide_3 .projects {
+  width: 90%;
+  display: table;
+  margin-bottom: 150px;
+}
+#slide_3 .projects .card {
+  display: table-cell;
+  width: 33%;
+  height: 300px;
+  padding: 0 35px;
+}
+#slide_3 .projects .card h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.8em;
+}
+#slide_3 .projects .card ul {
+  margin-top: 10px;
+}
+#slide_3 .projects .card li {
+  padding-top: 8px;
+  font-size: 1.2em;
+}
+#slide_3 .projects .card .vesta {
+  background: center/cover url("../img/vestaProperties.JPG");
+}
+#slide_3 .projects .card .cobra {
+  background: center/cover url("../img/cobraPricing.JPG");
+}
+#slide_3 .projects .card .gym {
+  background: center/cover url("../img/gymLanding.JPG");
+}
+#slide_3 .projects .img {
+  width: 100%;
+  height: 100%;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 950px) {
   #slide_1 .attributes li {
     display: block;
   }
