@@ -1,14 +1,15 @@
 # portfolio
-Personal portfolio project - Built from the ground up with HTML5, CSS3, and JavaScript.
+Simple personal portfolio website.  WIP.
 
 [Link](http://carsonbartholomew.me/)
 
 ## Developer Tools:
 - SASS (scss)
-- React
-- Redux
+- HTML5
+- JavaScript
 
 ## Libraries:
-- NPM
+- Wow.js
+- FontAwesome
 
 View the current version deployment [here](http://carsonbartholomew.me/).
