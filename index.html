@@ -6,6 +6,7 @@
 		<meta name="author" content="Carson Bartholomew">
 		<title>Carson Bartholomew</title>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
@@ -18,7 +19,7 @@
 						<li><a href="#slide_3">Projects</a></li>
 						<li><a href="https://github.com/Azzla" target='_blank'>Github</a></li>
 						<li>
-							<a href="./file/carsonBartholomew_ResumeFront.pdf" download='resume' target='_blank'>
+							<a href="./file/carsonBartholomew_Resume.pdf" download='resume' target='_blank'>
 								Resume <i class="fa fa-download" style="font-size: 24px"></i>
 							</a>
 						</li>
@@ -40,7 +41,7 @@
 			<section id='slide_2'>
 				<h1>Skills and Technologies</h1>
 				<div class='container'>
-					<div class='technologies'>
+					<div class='technologies wow fadeInLeft'>
 						<h2>Skills</h2>
 						<ul>
 							<li>Semantic HTML5</li>
@@ -51,18 +52,18 @@
 							<li>NPM &FilledVerySmallSquare; MongoDB</li>
 						</ul>
 					</div>
-					<div class='frameworks'>
+					<div class='frameworks wow fadeInDown' data-wow-delay='1s'>
 						<h2>Frameworks</h2>
 						<ul>
-							<li>React &FilledVerySmallSquare; Redux</li>
+							<li>Vue.js</li>
 							<li>NodeJS</li>
 							<li>Express.js</li>
 							<li>Passport.js</li>
 							<li>Mongoose</li>
-							<li>EJS Rendering</li>
+							<li>EJS</li>
 						</ul>
 					</div>
-					<div class='tools'>
+					<div class='tools wow fadeInRight' data-wow-delay='2s'>
 						<h2>Tools</h2>
 						<ul>
 							<li>Atom IDE</li>
@@ -82,7 +83,7 @@
 			<section id='slide_3'>
 				<h1>Projects</h1>
 				<div class="projects">
-					<div class="card">
+					<div class="card wow fadeInDown" data-wow-duration='1s'>
 						<h2>Cobra Containers Quote Tool</h2>
 						<div class="img cobra"></div>
 						<ul class='descriptors'>
@@ -93,7 +94,7 @@
 							<li>Features user authentication, management, and full database integration wtih MongoDB.</li>
 						</ul>
 					</div>
-					<div class="card">
+					<div class="card wow fadeInDown" data-wow-duration='1s' data-wow-delay='.5s'>
 						<h2>Vesta Properties Redesign</h2>
 						<div class="img vesta"></div>
 						<ul class='descriptors'>
@@ -102,7 +103,7 @@
 							<li>Integrated Google Maps and embedded video tours.</li>
 						</ul>
 					</div>
-					<div class="card">
+					<div class="card wow fadeInDown" data-wow-duration='1s' data-wow-delay='1s'>
 						<h2>Gym Landing Website</h2>
 						<div class="img gym"></div>
 						<ul class='descriptors'>
@@ -121,7 +122,10 @@
 		</div> <!--wrapper-->
 		
 		<!-- Scripts -->
-		<script src='js/script.js'></script>
+		<script src='js/wow.min.js'></script>
+		<script>
+			new WOW().init();
+		</script>
 	</body>
 </html>
 
